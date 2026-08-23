@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hans Keeren | GEO-specialist bij Qonvert</title>
+<meta name="description" content="Hans Keeren helpt merken gevonden worden in ChatGPT, Perplexity en Google AI Overviews. Werkt sinds 2008 aan vindbaarheid.">
+<link rel="canonical" href="https://qonvert-geo.com/">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/favicon.png">
+<style>
+:root{
+  --accent:#B11016;
+  --ink:#231F20;
+  --paper:#FBFAF8;
+  --slate:#6F7987;
+  --muted:#6B6866;
+  --line:#E5E1DC;
+  --card:#FFFFFF;
+  --display:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  --radius:14px;
+  --max:1020px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--paper);color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+header{padding:34px 0 0}
+.brandbar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brandbar img{height:34px;width:auto;display:block}
+.brandbar a.top{
+  font-size:14px;font-weight:500;color:var(--muted);text-decoration:none;
+  border-bottom:1px solid var(--line);padding-bottom:2px;
+}
+.brandbar a.top:hover{color:var(--ink);border-color:var(--ink)}
+
+.hero{padding:56px 0 52px}
+.hero::after{content:"";display:block;clear:both}
+.hero-text{max-width:none}
+.portrait{float:right;width:220px;margin:6px 0 24px 36px;shape-margin:24px}
+.portrait img{
+  width:100%;height:auto;display:block;border-radius:var(--radius);
+  box-shadow:0 1px 2px rgba(35,31,32,.05),0 14px 34px rgba(35,31,32,.10);
+}
+.eyebrow{
+  font-size:13px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:18px;
+}
+h1{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(34px,4.6vw,52px);line-height:1.05;letter-spacing:-.03em;margin-bottom:20px;
+}
+.lead{font-size:18px;color:var(--muted);max-width:58ch}
+.who{margin-top:28px;padding-top:22px;border-top:1px solid var(--line);display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.who strong{font-weight:600}
+.who span{color:var(--muted);font-size:15px}
+
+.clients{padding:4px 0 56px}
+.logos{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;flex-wrap:wrap;
+}
+.logos img{
+  height:38px;width:auto;display:block;
+  opacity:.85;
+  transition:opacity .2s ease;
+}
+.logos img:hover{opacity:1}
+@media (max-width:700px){
+  .logos{justify-content:center;gap:28px 34px}
+  .logos img{height:30px}
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-bottom:64px}
+.stat{background:var(--paper);padding:26px 24px}
+.stat b{display:block;font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.02em;line-height:1.1}
+.stat span{font-size:14px;color:var(--muted)}
+
+section.block{padding-bottom:64px}
+.intro{
+  background:var(--slate);color:var(--paper);
+  border-radius:var(--radius);padding:44px 40px;margin-bottom:64px;
+}
+.intro h2{color:rgba(251,250,248,.6)}
+.intro p{max-width:62ch}
+.intro p{margin-bottom:16px}
+.intro p:last-child{margin-bottom:0}
+.intro h2.second{margin-top:36px}
+.intro.block{padding-bottom:44px}
+h2{font-family:var(--display);font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.service{border-top:2px solid var(--ink);padding-top:16px}
+.service h3{font-family:var(--display);font-weight:600;font-size:19px;letter-spacing:-.01em;margin-bottom:6px}
+.service p{font-size:15px;color:var(--muted);line-height:1.6}
+
+.contact{background:var(--accent);color:var(--paper);border-radius:var(--radius);padding:44px 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px}
+.contact h2{color:rgba(251,250,248,.55);margin-bottom:18px}
+.contact p.big{font-family:var(--display);font-weight:600;font-size:clamp(22px,2.6vw,28px);line-height:1.25;letter-spacing:-.02em;margin-bottom:26px;max-width:22ch}
+.contact p.sub{color:rgba(251,250,248,.7);font-size:15.5px;max-width:32ch}
+.contact a{color:var(--paper)}
+.clist{list-style:none;font-size:16px}
+.clist li{padding:9px 0;border-bottom:1px solid rgba(251,250,248,.14)}
+.clist li:last-child{border-bottom:0}
+.clist span{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:rgba(251,250,248,.45);margin-bottom:2px}
+.clist a{text-decoration:none;border-bottom:1px solid rgba(251,250,248,.3)}
+.clist a:hover{border-color:var(--paper)}
+.legal{font-size:13.5px;color:rgba(251,250,248,.55);line-height:1.7}
+.legal strong{color:var(--paper);font-weight:600}
+
+footer{padding:28px 0 48px;font-size:13.5px;color:var(--muted);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer a{color:var(--muted)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+@media (max-width:860px){
+  .hero{padding:36px 0 40px}
+  .portrait{width:150px;margin:4px 0 18px 22px}
+  .contact{grid-template-columns:1fr;padding:34px 26px;gap:30px}
+  .intro{padding:32px 26px}
+  .services{grid-template-columns:1fr}
+  .clients{padding:4px 0 56px}
+.logos{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:40px;flex-wrap:wrap;
+}
+.logos img{
+  height:38px;width:auto;display:block;
+  opacity:.85;
+  transition:opacity .2s ease;
+}
+.logos img:hover{opacity:1}
+@media (max-width:700px){
+  .logos{justify-content:center;gap:28px 34px}
+  .logos img{height:30px}
+}
+.stats{grid-template-columns:1fr}
+  body{font-size:16px}
+  .brandbar img{height:30px}
+}
+@media (max-width:480px){
+  .portrait{width:118px;margin:2px 0 14px 16px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brandbar">
+      <img src="img/logo.png" alt="Qonvert">
+      <a class="top" href="https://qonvert.com/">Naar qonvert.com</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <figure class="portrait">
+      <img src="img/portret.jpg" alt="Hans Keeren bij de Ponte 25 de Abril in Lissabon" width="760" height="1110">
+    </figure>
+    <div class="hero-text">
+      <div class="eyebrow">Generative Engine Optimization</div>
+      <h1>GEO specialist Qonvert</h1>
+      <p class="lead">Vraag ChatGPT eens naar jouw branche. Sta jij ertussen? Steeds meer mensen stellen hun vraag aan een AI in plaats van aan Google. Het antwoord noemt een handvol merken. Ik zorg dat jij daarbij hoort.</p>
+      <div class="who">
+        <strong>Hans Keeren</strong>
+        <span>SEO- en GEO-specialist sinds 2008</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="block intro">
+    <h2>Wie is Hans Keeren</h2>
+    <p>Hans Keeren is sinds 2008 SEO-specialist en kent het vak van binnenuit. Hij werkte voor grote en kleine merken, van slagerij tot multinational. Voor die bedrijven verdiende hij de afgelopen jaren meer dan 30 miljoen euro.</p>
+    <p>Vandaag de dag is hij gespecialiseerd in GEO, oftewel Generative Engine Optimization. Dat betekent dat hij zijn klanten vindbaar maakt in LLM&rsquo;s zoals ChatGPT, Google AI Overviews, Google AI Modus, Claude en Perplexity.</p>
+    <p>Hans Keeren woont en werkt grotendeels in Portugal en reist regelmatig door Europa. Hij werkt vanzelfsprekend grotendeels online en op afstand.</p>
+
+    <h2 class="second">Over Qonvert</h2>
+    <p>Qonvert is het bedrijf van Hans Keeren waarmee hij sinds 2008 tot en met nu zijn SEO- en GEO-diensten uitvoerde. Qonvert is gevestigd in Portugal en werkt voor merken die de shift maken van SEO naar GEO en nog wachten op hun eerste vermelding in de LLM&rsquo;s.</p>
+  </section>
+
+  <section class="clients" aria-label="Merken waarvoor Hans Keeren werkte">
+    <div class="logos">
+      <img src="img/becam.png" alt="Becam" loading="lazy">
+      <img src="img/kpmg.png" alt="KPMG Meijburg &amp; Co" loading="lazy">
+      <img src="img/berlage.png" alt="Beurs van Berlage" loading="lazy">
+      <img src="img/valkwijn.png" alt="Valkwijn" loading="lazy">
+      <img src="img/landrovers.png" alt="The Landrovers" loading="lazy">
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><b>18 jaar</b><span>ervaring met vindbaarheid</span></div>
+    <div class="stat"><b>400+</b><span>projecten uitgevoerd</span></div>
+    <div class="stat"><b>&euro;30 mln+</b><span>omzet voor klanten</span></div>
+  </div>
+
+  <section class="block">
+    <h2>Waar ik aan werk</h2>
+    <div class="services">
+      <div class="service">
+        <h3>GEO-audit</h3>
+        <p>Meten hoe AI-modellen jouw merk nu beschrijven en waar de ruimte zit om dat te veranderen.</p>
+      </div>
+      <div class="service">
+        <h3>Prompt onderzoek</h3>
+        <p>Uitzoeken welke vragen jouw kopers stellen aan een AI en welke merken daar nu op verschijnen.</p>
+      </div>
+      <div class="service">
+        <h3>On site content</h3>
+        <p>Pagina&rsquo;s schrijven en structureren zodat modellen jouw antwoord kunnen overnemen en citeren.</p>
+      </div>
+      <div class="service">
+        <h3>Off site content</h3>
+        <p>Zorgen dat de bronnen waar AI uit put jouw merk noemen op de plekken die tellen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="contact">
+      <div>
+        <h2>Contact</h2>
+        <p class="big">Benieuwd hoe jouw merk er nu voorstaat in AI?</p>
+        <p class="sub">Het volledige verhaal staat op <a href="https://qonvert.com/">qonvert.com</a>.</p>
+      </div>
+      <ul class="clist">
+        <li><span>E-mail</span><a href="mailto:hans@qonvert-geo.com">hans@qonvert-geo.com</a></li>
+        <li><span>WhatsApp</span><a href="https://wa.me/31614370277">06 14370277</a></li>
+        <li><span>Bedrijf</span>
+          <div class="legal">
+            <strong>Qonvert</strong><br>
+            Sketch of World, Lda.<br>
+            Rua Alfredo Lopes Vilaverde 9D<br>
+            2770-009 Pa&ccedil;o de Arcos, Portugal<br>
+            NIF PT518546772
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div>&copy; 2026 Qonvert &middot; onderdeel van Sketch of World, Lda.</div>
+    <div><a href="https://qonvert.com/privacy/">Privacy</a></div>
+  </footer>
+
+</div>
+</body>
+</html>
